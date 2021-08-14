@@ -1,0 +1,73 @@
+html, body{
+    margin: 0;
+    background-color: black;
+}
+#btn-menu {
+	display: none;
+}
+
+header {
+    background-color: black;
+	font-weight: 600;
+    border: 1px solid red;
+}
+
+header label {
+	color: white;
+	font-size: 24px;
+	display: block;
+	padding: 5px 10px;
+	width: 20px;
+	border-right: 1px solid red;
+	display: none;
+}
+
+header label:hover {
+    color:  red;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+}
+
+.menu li a {
+    margin-top: 25px;
+	color: white;
+    font-size: 18px;
+	text-decoration: none;
+	padding: 5px 20px;
+	display: block;
+}
+
+.menu li a:hover {
+    background-color: red;
+    border-radius: 15px; 
+}
+
+@media(max-width: 760px){
+
+    header label{
+        display: block;
+    }
+
+    .menu ul{
+        position: absolute;
+        background-color: #8080803b;
+        width: 60%;
+        flex-direction: column;
+        margin-left: -70%;
+    }
+   
+    .menu  a{
+        border-top: 1px solid  red;
+    }
+
+    #btn-menu:checked ~ .menu ul{
+        margin-left: 0;
+    }
+} 
